@@ -22,7 +22,7 @@ pipeline {
     }
     stage('git') {
       steps {
-        git(url: 'https://github.com/jamesz2011/pipeline_learning.git', branch: 'masster', changelog: true, poll: true)
+        git(url: 'https://gitee.com/jamesz2011/jmeter_jenkins_mvn.git', branch: 'master', changelog: true)
       }
     }
     stage('autoTest') {
