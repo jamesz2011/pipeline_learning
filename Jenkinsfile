@@ -15,7 +15,7 @@ pipeline {
         }
         stage('testsleep') {
           steps {
-            sleep 5
+            sleep(time: 5, unit: 'MINUTES')
           }
         }
       }
