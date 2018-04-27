@@ -4,18 +4,20 @@ pipeline {
     stage('init') {
       parallel {
         stage('init') {
+          agent any
           steps {
             echo '123'
           }
         }
-        stage('init1') {
+        stage('cleanup') {
           steps {
-            echo '21121'
+            cleanWs(deleteDirs: true)
           }
         }
         stage('testsleep') {
           steps {
             sleep(time: 5, unit: 'MINUTES')
+            sleep 3
           }
         }
       }
